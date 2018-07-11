@@ -1,0 +1,20 @@
+* This is a sample to describe how to use auto configure tools.
+Please refer: [[https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install][The magic behind configure, make, make install]]
+
+* How to build
+** On the maintainer’s system:
+ #+BEGIN_SRC sh
+ aclocal # Set up an m4 environment
+ autoconf # Generate configure from configure.ac
+ automake --add-missing # Generate Makefile.in from Makefile.am
+ ./configure # Generate Makefile from Makefile.in
+ make distcheck # Use Makefile to build and test a tarball to distribute
+ #+END_SRC
+
+** On the end-user’s system:
+ Extract the `helloworld-0.1.tar.gz` file.
+ #+BEGIN_SRC sh
+ ./configure # Generate Makefile from Makefile.in
+ make # Use Makefile to build the program
+ make install # Use Makefile to install the program
+ #+END_SRC
