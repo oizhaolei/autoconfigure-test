@@ -1,7 +1,12 @@
 * This is a sample to describe how to use auto configure tools.
 Please refer: [[https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install][The magic behind configure, make, make install]]
 
-* How to build
+* How to build on Ubuntu
+#+BEGIN_SRC sh
+ sudo apt-get install build-essential
+ sudo apt install automake automake1.11
+#+END_SRC
+
 ** On the maintainer’s system:
  #+BEGIN_SRC sh
  aclocal # Set up an m4 environment
